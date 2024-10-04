@@ -1,0 +1,25 @@
+.box {
+    position: relative;
+    background: linear-gradient(to right, transparent, #929497);
+    background-clip: padding-box;
+    border: solid 2px transparent;
+    border-radius: 20px;
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: -3px; right: -3px; bottom: -3px; left: -3px;
+        z-index: -1;
+        border-radius: 20px;
+        background: linear-gradient(to right, transparent, #cccccc);
+    }
+
+    &.revert {
+        background: linear-gradient(to right, #929497, transparent);
+        background-clip: padding-box;
+
+        &:before {
+            background: linear-gradient(to right, #cccccc, transparent);
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import 'styles/responsive';
+
+.container {
+    @include responsiveContainer();
+
+    padding-top: 9rem;
+}
+
+.segmentContainer {
+    position: relative;
+    margin-top: 3rem;
+
+    @include respond-to('large') {
+        margin-top: 7rem;
+    }
+}

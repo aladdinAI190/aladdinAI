@@ -1,0 +1,39 @@
+@import 'styles/responsive';
+
+.container {
+    margin-top: 7rem;
+}
+
+.boxContainer {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+
+.box {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    gap: 1rem;
+    text-align: center;
+
+    @include respond-to('medium') {
+        width: 50%;
+    }
+
+    @include respond-to('large') {
+        width: 25%;
+    }
+
+    .image {
+        width: 80%;
+    }
+
+    .boxTitle {
+        color: white;
+    }
+}

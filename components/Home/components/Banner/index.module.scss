@@ -1,0 +1,138 @@
+@import 'styles/responsive';
+
+.container {
+    position:relative;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 100%;
+    line-height: 1.2rem;
+
+    @include respond-to('medium') {
+        font-size: 2rem;
+        line-height: 2rem;
+        width: 70%;
+    }
+
+    @include respond-to('large') {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .title2 {
+        background: radial-gradient(#f7b528, #fdcc90);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline;
+    }
+}
+
+.boxContainer {
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.box {
+    width: calc(30% + 4rem);
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+    @include respond-to('medium') {
+        width: calc(30% + 4rem);
+    }
+
+    &.left {
+        text-align: right;
+        margin-left: -4rem;
+
+        .description {
+            justify-content: end;
+        }
+    }
+
+    &.right {
+        text-align: left;
+        margin-right: -4rem;
+
+        .description {
+            max-width: 15rem;
+        }
+    }
+}
+
+.description {
+    font-size: 0.8rem;
+    font-weight: 500;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+
+    @include respond-to('medium') {
+        font-size: 1rem;
+    }
+}
+
+.subscribeContainer {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+    min-height: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 7rem;
+
+    @include respond-to('medium') {
+        margin-bottom: 0;
+    }
+}
+
+.subscribeTitle {
+    font-size: 0.8rem;
+    width: 40%;
+    color: white;
+
+    @include respond-to('medium') {
+        font-size: 1.2rem;
+    }
+}
+
+.subscribeButton {
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 10rem;
+    max-height: 3rem;
+    background: #ffffffcc;
+
+    @include respond-to('medium') {
+        background: white;
+    }
+}
+
+.image {
+    position: absolute;
+    right: -20px;
+    width: 50%;
+
+    @include respond-to('medium') {
+        top: 2rem;
+        width: calc(100% - 18rem);
+        max-width: 380px;
+    }
+
+    @media (min-width: 600px) {
+        top: -2rem;
+        width: calc(100% - 18rem);
+    }
+
+    @include respond-to('large') {
+        top: 0;
+        max-width: 470px;
+    }
+}

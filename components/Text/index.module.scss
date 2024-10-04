@@ -1,0 +1,24 @@
+@import 'styles/responsive';
+
+.orange {
+    background: linear-gradient(to right, #f7b528, #fdcc90);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.white {
+    background: linear-gradient(to right, white, gray);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+
+    @include respond-to('large') {
+        font-size: 1.5rem;
+    }
+}

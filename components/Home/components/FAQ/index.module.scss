@@ -1,0 +1,58 @@
+@import 'styles/responsive';
+
+.container {
+    margin-top: 7rem;
+}
+
+.faqContainer {
+    color: black;
+    background: linear-gradient(to right, white, #929497);
+    border: solid 2px white;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+
+    .faqItem {
+        background: none;
+        border: none;
+        color: black;
+        width: 100%;
+        text-align: left;
+        border-bottom: solid 1px #808184;
+        padding: 1.5rem;
+        position: relative;
+        border-radius: 0;
+        display: block;
+
+        &:hover {
+            cursor: pointer;
+            background: white;
+        }
+
+        .answer {
+            padding-top: 1rem;
+            display: none;
+            line-height: 1.5rem;
+        }
+
+        .icon {
+            color: #808184;
+            transform: rotate(0deg);
+            transition: transform 0.15s;
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+        }
+
+        &.expand {
+            .answer {
+                display: block;
+            }
+
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
